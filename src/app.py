@@ -2,7 +2,6 @@ import asyncio
 from bleak import *
 from bleak.backends.scanner import AdvertisementData
 from aioconsole import ainput
-import matplotlib.pyplot as pltpip
 from datetime import datetime
 
 devices = ["FE:A9:04:78:B6:C9", "CA:84:BC:CC:11:21"]

@@ -52,6 +52,7 @@ async def get_stored_data():
             print(e)
         finally:
             await client.disconnect()
+        
 
 
 # Get broadcasted data function
@@ -133,7 +134,7 @@ def reader(reading: str):
     values = reading[8:14]
 
     # Convert to datetime format
-    dtime_obj = datetime.datetime.utcfromtimestamp(int(date, 16))
+    dtime_obj = datetime.datetime.fromtimestamp(int(date, 16))
     dtime_obj += timedelta(hours=12)
     datetime_str = dtime_obj.strftime("%Y-%m-%d %H:%M:%S")
 
